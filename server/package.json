@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm ./src/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon -r esm src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^6.0.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.17",
+    "nodemon": "^1.18.10",
+    "config": "^3.0.1"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
+  }
+}
