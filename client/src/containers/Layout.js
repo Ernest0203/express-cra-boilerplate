@@ -22,13 +22,9 @@ const Layout = () => {
 
   return (
     <LayoutWrapper>
-			{/* <nav>
-				{linksList}
-			</nav> */}
 			<div className="mainContent">
 				<Suspense fallback={() => <p>Loading...</p>}>
 					<Switch>
-						{/* {routesList} */}
 					</Switch>
 				</Suspense>
 			</div>
