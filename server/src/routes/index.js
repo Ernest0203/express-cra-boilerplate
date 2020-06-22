@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-//const Model = require('../db/models/model.js');
+router.get('/', (req, res) => res.json('Working!'));
 
 module.exports = router;

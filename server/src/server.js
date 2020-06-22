@@ -1,22 +1,10 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const path = require('path');
-
-// process.env["NODE_CONFIG_DIR"] = __dirname + "/config/";
-// const config = require('config');
-
-// const db = config.get('mongoURI');
-// const route = require('./routes/route');
+const routes = require('./routes/index');
 
 const app = express(); 
 
-// mongoose.connect(db)
-//   .then(() => console.log('MongoDB Connected...'))
-//   .catch(err => console.log(err));
-
 app.use(express.json());
-
-//app.use('/route', route);
+app.use(routes);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../', '../', 'client', 'build')));
@@ -26,6 +14,4 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const port = process.env.PORT || 2000;
-app.listen(port, () => console.log(`Server started on port ${port}...`));
-
+module.exports = app;
