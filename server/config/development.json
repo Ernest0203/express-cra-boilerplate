@@ -16,7 +16,7 @@
       "password": ""
     },
     "mongo": {
-      "uri": "mongodb://ernest2332:nballstar0203@ds361085.mlab.com:61085/filter"
+      "uri": "mongodb+srv://admin:admin@cluster0.l0g7s.mongodb.net/seed?authSource=admin&replicaSet=atlas-v1xn06-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true"
     }
   }
 }

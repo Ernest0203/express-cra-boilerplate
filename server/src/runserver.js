@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const server = require('./server');
 
 const mongoUri = config.get('db.mongo.uri');
-mongoose.connect(mongoUri)
+mongoose.connect(mongoUri, {useNewUrlParser: true,  useUnifiedTopology: true,})
   .then(() => console.info('MongoDB connected...'))
   .catch(err => console.info(err));
 
