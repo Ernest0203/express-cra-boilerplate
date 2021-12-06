@@ -35,10 +35,10 @@ const gracefulShutdownHandler = function gracefulShutdownHandler(signal) {
   ONLINE = false;
 
   setTimeout(() => {
-    console.log('🤞 Shutting down application');
+    console.log('Shutting down application');
     // stop the server from accepting new connections
     instance.close(function () {
-      console.log('👋 All requests stopped, shutting down');
+      console.log('All requests stopped, shutting down');
       // once the server is not accepting connections, exit
       process.exit();
     });
