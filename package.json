@@ -19,8 +19,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/boom": "^9.1.4",
-    "concurrently": "^5.1.0",
-    "winston": "^3.3.3"
+    "concurrently": "^5.1.0"
   }
 }

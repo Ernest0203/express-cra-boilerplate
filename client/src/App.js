@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import store from './redux/store';
 import styled, { createGlobalStyle } from 'styled-components';
 import Layout from './containers/Layout';
+import ErrorHandler from "./containers/ErrorHandler/index";
 
 function App() {
   return (
@@ -11,14 +12,16 @@ function App() {
       <GlobalStyle />
       <Provider store={store}>
         <Router>
-          <AppWrapper>
-            <header className="appHeader">
-              <h1>Express - Cra</h1>
-            </header>
-            <main className="appMain">
-              <Layout/>
-            </main>
-          </AppWrapper>
+          <ErrorHandler>
+            <AppWrapper>
+              <header className="appHeader">
+                <h1>Express - Cra</h1>
+              </header>
+              <main className="appMain">
+                <Layout/>
+              </main>
+            </AppWrapper>
+          </ErrorHandler>
         </Router>
       </Provider>
     </Fragment>
